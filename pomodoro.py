@@ -3,8 +3,12 @@ import osascript
 import time
 
 ### Notification when pomodoro is finished ###
-def notification():
-    display_notification = osascript.run('display notification "Feel free to take a 5min break." with title "Time finished!"')
+def notification_pomodoro_finished():
+    display_notification = osascript.run('display notification "Here is a 5min break." with title "Pomodoro finished!"')
+
+### Notification when break is finished ###
+def notification_break_finished():
+    display_notification = osascript.run('display notification "Back to work. Another pomodoro started." with title "Break finished!"')
 
 ### Countdown ###
 def countdown(t):
@@ -15,12 +19,16 @@ def countdown(t):
         time.sleep(1)
         t -= 1
 
-
 ### 5 min break when pomodoro finishes ###
 def pomodoro_break():
     break_timer = 300 # 5 mins
 
+    print("\nPomodoro finished! Here is a 5 min break.")
+
     countdown(break_timer)
+
+    print("\nBreak finished!.\n")
+    notification_break_finished()
 
 ### Timer ###
 def pomodoro(t):
@@ -28,7 +36,7 @@ def pomodoro(t):
     
     countdown(t) # countdown starts
 
-    notification() # when pomodoro finishes, a popup notification appears
+    notification_pomodoro_finished() # when pomodoro finishes, a popup notification appears
 
     pomodoro_break() # 5min break
 
