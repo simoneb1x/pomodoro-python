@@ -1,6 +1,14 @@
 # Python Pomodoro
 A personal Python script that I use to set a Pomodoro timer.
 
+# Dependencies
+_osascript_ is needed. It executes AppleScripts and other OSA language scripts. In our case, it is used to create simple notifications with sound alerts.
+
+Run the command:
+
+```sh
+pip install osascript
+```
 # How to use
 1. Clone the repository
 2. From the terminal, run the following command:
