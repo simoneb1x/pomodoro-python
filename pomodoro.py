@@ -27,7 +27,7 @@ def pomodoro_break():
 
     countdown(break_timer)
 
-    print("\nBreak finished!.\n")
+    print("\nBreak finished!\n")
     notification_break_finished()
 
 ### Timer ###
