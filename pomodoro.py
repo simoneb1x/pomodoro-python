@@ -4,11 +4,11 @@ import time
 
 ### Notification when pomodoro is finished ###
 def notification_pomodoro_finished():
-    display_notification = osascript.run('display notification "Here is a 5min break." with title "Pomodoro finished!"')
+    display_notification = osascript.run('display notification "Here is a 5min break." with title "Pomodoro finished!" sound name "Glass"')
 
 ### Notification when break is finished ###
 def notification_break_finished():
-    display_notification = osascript.run('display notification "Back to work. Another pomodoro started." with title "Break finished!"')
+    display_notification = osascript.run('display notification "Back to work. Another pomodoro started." with title "Break finished!" sound name "Tink"')
 
 ### Countdown ###
 def countdown(t):
