@@ -9,7 +9,7 @@ Run the command:
 ```sh
 pip install osascript
 ```
-# How to use
+# How to
 1. Clone the repository
 2. From the terminal, run the following command:
 
