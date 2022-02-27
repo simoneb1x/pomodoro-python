@@ -48,8 +48,20 @@ def main():
     print("Welcome to Pomodoro timer!")
     print("Please, select between 25 or 30 minutes.")
 
-    timer_selection = int(input("25/30?\n")) # Requesting input ('25' or '30' expected)
+    while True:
+        timer_selection = input("25/30?\n") # Requesting input ('25' or '30' expected)
+        
+        try:
+            timer_selection = int(timer_selection)
+        except ValueError:
+            print("\nInvalid input. Please, select between 25 or 30 minutes.")
+            continue
+        if timer_selection == 25 or timer_selection == 30:
+            break
+        else:
+            print("\nInvalid number. Select between 25 or 30 minutes.")
+    
     timer_selection = timer_selection * 60 # Converting from minutes to seconds
-    pomodoro(timer_selection) # Starting the timer  
+    pomodoro(timer_selection) # Starting the timer 
 
 main()
